@@ -37,15 +37,15 @@
         <li><a href="{% url 'main_app:history' %}">
             <i class="fas fa-landmark"></i>Historia<span class="line"></span></a></li>
         <li><a href="{% url 'main_app:sport' %}">
-            <i class="far fa-futbol"></i>Sport<span class="line"></span></a></li>
+            <i class="far fa-futbol"></i> Sport <span class="line"></span></a></li>
         <li><a href="{% url 'main_app:promotion' %}">
             <i class="fab fa-youtube-square"></i>Promocja<span class="line"></span></a></li>
         {% if user.is_authenticated %}
             <li><a href="{% url 'users:user_details' %}">
-            <i class="fab fa-youtube-square"></i>Użytkownik:{{ user.get_username }} Wyloguj<span class="line"></span></a></li>
+            <i class="fas fa-user"></i>{{ user.get_username }}: Wyloguj<span class="line"></span></a></li>
         {% else %}
             <li><a href="{% url 'users:signup' %}">
-                <i class="fab fa-youtube-square"></i>Zaloguj/Rejestracja<span class="line"></span></a></li>
+                <i class="fab fa-youtube-square"></i>Zaloguj<span class="line"></span></a></li>
         {% endif %}
     </ul>
 </nav>

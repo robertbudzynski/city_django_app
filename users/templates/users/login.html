@@ -5,10 +5,10 @@
 {% block content %}
     <div class="card">
         <a href="{% url 'users:login' %}">
-            <button type="button" class="button-normal btn btn-primary btn-block">Logowanie</button>
+            <button type="button" class="button-long btn btn-primary btn-block">Logowanie</button>
         </a>
         <a href="{% url 'users:signup' %}">
-            <button type="button" class="button-normal btn btn-primary btn-block">Rejestracja</button>
+            <button type="button" class="button-long btn btn-primary btn-block">Rejestracja</button>
         </a>
     </div>
     <div class="card">
@@ -21,7 +21,7 @@
             <form method="POST">
                 {% csrf_token %}
                 {% bootstrap_form form %}
-                <input type="submit" value="Login" class="btn btn-primary btn-lg btn-block">
+                <input type="submit" value="Zaloguj" class="btn btn-primary btn-lg btn-block">
             </form>
         </div>
     </div>

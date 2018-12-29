@@ -2,30 +2,36 @@
 {% load staticfiles %}
 
 {% block content %}
-    {% for place in object_list %}
-        <article class=" clearfix">
-            <h2>{{ place.title }}</h2>
+{% for place in object_list %}
+<article class="clearfix">
+    <div>
+        <h2>{{ place.title }}</h2>
+        <div class="clearfix article-container-image">
             <img class="img-article" src="{{ place.image.url }}" alt="Opera Nova w Bydgoszczy">
             <p>{{ place.description }}</p>
+        </div>
+        <div class="clearfix article-container">
             <a href="{{ place.url_address }}">
-                <button type="button" class="button-normal btn btn-primary">Szczegóły</button>
+                <button type="button" class="button-normal btn btn-primary ">Szczegóły</button>
             </a>
             <br>
             {% if user.is_authenticated %}
-                <a href="{% url 'users:add_visited' place_id=place.id %}">
-                    <button type="button" class="button-normal btn btn-success">Dodaj do odwiedzonych</button>
-                </a>
-                <br>
-                <a href="{% url 'users:add_to_visit' place_id=place.id %}">
-                    <button type="button" class="button-normal btn btn-success">Dodaj do planowanych</button>
-                </a>
+            <a href="{% url 'users:add_visited' place_id=place.id %}">
+                <button type="button" class="button-normal btn btn-success ">Dodaj do odwiedzonych</button>
+            </a>
+            <br>
+            <a href="{% url 'users:add_to_visit' place_id=place.id %}">
+                <button type="button" class="button-normal btn btn-success ">Dodaj do planowanych</button>
+            </a>
             {% endif %}
-        </article>
-    {% endfor %}
-    <section class="map">
-        <h1>Mapa Bydgoskich atrakcji</h1>
-        <iframe class="map"
-                src="https://www.google.com/maps/d/embed?mid=1pEExhD6Ac6BVkkW13KjSp-fxH3qE6I91&hl=pl">
-        </iframe>
-    </section>
+        </div>
+    </div>
+</article>
+{% endfor %}
+<section class="map">
+    <h1>Mapa Bydgoskich atrakcji</h1>
+    <iframe class="map"
+            src="https://www.google.com/maps/d/embed?mid=1pEExhD6Ac6BVkkW13KjSp-fxH3qE6I91&hl=pl">
+    </iframe>
+</section>
 {% endblock %}
