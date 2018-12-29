@@ -1,1 +1,1 @@
-# city_django_app
+# city_application

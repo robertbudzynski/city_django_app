@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+    <h1> Krótka Historia Bydgoszczy</h1>
+    <div id="arrow"><i class="fas fa-angle-down" aria-hidden="true"></i></div>
+    <article class="clearfix">
+        <img class="img-article" src="{% static 'img/Historia_2.JPG' %}" alt="">
+        <p><b>Nadzwyczaj dogodne położenie terenów dzisiejszej Bydgoszczy</b> nie mogło nie zwrócić uwagi
+            pierwszych
+            osadników. Według legendy byli nimi dwaj bracia Byd i Gost, którzy przywędrowali tu z południa Polski,
+            poszukując na przemierzanych ziemiach takiej, na której mogliby się osiedlić. Każda kraina miała jednak
+            wady, które ją, zdaniem braci, dyskwalifikowały. Aż w końcu, po wielu dniach wędrówki, Byd i Gost
+            odnaleźli miejsce idealne, położone nad Brdą, w pobliżu Wisły, otoczone przez lasy, jeziora i
+            rozlewiska, znajdujące się na skrzyżowaniu dróg, prowadzących na wszystkie strony świata. Tu właśnie
+            postanowili założyć gród i nazwać go Bydgost.</p>
+        <p><b>Dzieje Bydgoszczy sięgają pierwszej połowy XI wieku,</b> kiedy to na terenach dzisiejszego
+            miasta, powstał
+            gród. Za czasów panowania Kazimierza Odnowiciela, Bydgoszcz została podbita przez Pomorzan. Za sprawą
+            Bolesława Krzywoustego gród został znów włączony w granice państwa polskiego i pojawił się po raz
+            pierwszy w kronice Galla Anonima.</p>
+        <p><b>Wojny Władysława Łokietka z Krzyżakami w XIV wieku</b> doszczętnie zniszczyły ziemię
+            bydgoską. Okupacja
+            krzyżacka na tych terenach trwała siedem lat (1330-1337). Odzyskał je dopiero następca Łokietka –
+            Kazimierz Wielki. Strategiczne położenie Bydgoszczy na skrzyżowaniu szlaków handlowych doprowadziło 19
+            kwietnia 1346 roku do nadania jej praw miejskich. Miasto rozwijało się doskonale, zwłaszcza w
+            dziedzinie rzemiosła i handlu, aż do połowy XVII wieku. Potop szwedzki (1655-1660) i wielka wojna
+            północna (1700-1721) doprowadziły Bydgoszcz do ruiny.</p>
+
+        <p><b>W wyniku ustaleń,</b> dotyczących pierwszego rozbioru Polski w 1772 roku, Bydgoszcz została
+            włączona do
+            Prus. To właśnie za czasów panowania pruskiego zbudowano tu Kanał Bydgoski, łączący Wisłę i Odrę.</p>
+        <p><b>Insurekcja Kościuszkowska</b> w 1794 roku dała Bydgoszczanom chwilową nadzieję na
+            wyzwolenie się spod
+            panowania pruskiego. Co prawda wkroczył tu na czele swoich oddziałów Jan Henryk Dąbrowski i po krótkim
+            oblężeniu zdołał zająć miasto, ale już po dwóch tygodniach, po klęsce powstania, generał wycofał się.</p>
+
+        <p><b>Po zwycięstwie Napoleona nad Prusami,</b> Bydgoszcz została włączona w granice, utworzonego
+            w 1807 roku
+            przez francuskiego cesarza, Księstwa Warszawskiego. Jednakże już osiem lat później, po klęsce Napoleona
+            w 1815 roku, miasto, zgodnie z postanowieniami Kongresu Wiedeńskiego, powróciło w granice Królestwa
+            Prus i stało się siedzibą administracyjną Prowincji Poznańskiej.</p>
+        <p><b>Rewolucja przemysłowa</b> z drugiej połowy XIX wieku nie ominęła Bydgoszczy. Miasto zaczęło
+            się prężnie
+            rozwijać. Włączono je do sieci kolejowej Prus, otwierano nowe zakłady przemysłowe, budowano domy
+            mieszkalne, zagospodarowywano, niewykorzystane jeszcze, tereny. Rozwój ten trwał aż do wybuchu
+            pierwszej wojny światowej. Na mocy, kończącego wojnę, traktatu
+            wersalskiego, Bydgoszcz powróciła do Polski. Oficjalne przejęcie władzy miało miejsce 19 stycznia 1920
+            roku. 20 stycznia zaś na teren miasta wkroczyli żołnierze Wojska Polskiego. Bydgoszcz w dalszym ciągu
+            należała do województwa poznańskiego i stanowiła siedzibę władz powiatowych na jego terenie. Dopiero w
+            1938 roku została włączona do województwa pomorskiego.</p>
+        <p><b>Po wybuchu drugiej wojny światowej</b> oddziały niemieckie wkroczyły do Bydgoszczy 3
+            września 1939 roku.
+            Wtedy to w mieście rozegrały się wydarzenia, nazywane przez stronę polską „dywersją niemiecką w
+            Bydgoszczy”, a przez niemiecką propagandę określane mianem „bydgoskiej krwawej niedzieli”. W czasie
+            trwających do dnia następnego walk zginęło 365 osób, zarówno Niemców, jak i Polaków. Okrutna okupacja
+            hitlerowska w Bydgoszczy rozpoczęła się 5 września i do 1945 roku pochłonęła około 10 000 ofiar. W tym
+            czasie Bydgoszcz był stolicą rejencji w okręgu Gdańsk-Prusy Zachodnie.</p>
+        <p><b>Miasto zostało wyzwolone przez Armię Czerwoną,</b> wspieraną przez oddziały Wojska
+            Polskiego w dniach 23-27
+            stycznia 1945 roku. Bydgoszcz została stolicą województwa pomorskiego.</p>
+
+        <img class="img-article" src="{% static 'img/historia_1.jpg' %}" alt="">
+        <p><b>W latach powojennych</b> miasto w dalszym ciągu rozwijało się przemysłowo oraz szybko rozrastało się
+            terytorialnie. Rosła także liczba ludności.</p>
+        <p><b>W latach 50.</b> pojawiły się tu nowe przedsiębiorstwa średniej wielkości. Niestety po 1989 roku
+            wiele z
+            nich upadło lub znacznie ograniczyło działalność.</p>
+        <p><b>Miasto rozwijało się</b> także jako ośrodek akademicki. W 1951 roku otworzono tu Wieczorową Szkołę
+            Inżynierską (obecny Uniwersytet Technologiczno-Przyrodniczy im. Jana i Jędrzeja Śniadeckich). Istnieją
+            tu także: Uniwersytet Kazimierza Wielkiego, Akademia Muzyczna im. Feliksa Nowowiejskiego oraz Collegium
+            Medicum im. Ludwika Rydygiera (filia medyczna Uniwersytetu Mikołaja Kopernika).</p>
+        <p><b>Dzisiaj Bydgoszcz</b> jest jednym z największych i najludniejszych miast w Polsce. Trwające obecnie,
+            szeroko
+            zakrojone, rozbudowa i rewitalizacja miasta, mają za zadanie nie tylko poprawić jego wygląd, ale także
+            przywrócić mu dawną, wysoką pozycję gospodarczą.</p>
+        <p>Źródło: http://www.bydgoszczdzisiaj.pl/historia-bydgoszczy</p>
+    </article>
+{% endblock %}

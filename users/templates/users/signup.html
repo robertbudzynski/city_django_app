@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+{% load staticfiles %}
+
+
+{% block content %}
+    <div class="card">
+        <a href="{% url 'users:login' %}">
+            <button type="button" class="button-normal btn btn-primary btn-block">Logowanie</button>
+        </a>
+        <a href="{% url 'users:signup' %}">
+            <button type="button" class="button-normal btn btn-primary btn-block">Rejestracja</button>
+        </a>
+    </div>
+    <div class="card">
+        <div class="card-footer text-muted">
+            <h3 class="card-footer-text">Rejestracja</h3>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <form action="{% url 'users:signup' %}" method="POST">
+                {% csrf_token %}
+                {% bootstrap_form form %}
+                <input type="submit" value="Sign Up" class="btn btn-primary btn-lg btn-block">
+            </form>
+        </div>
+    </div>
+{% endblock %}

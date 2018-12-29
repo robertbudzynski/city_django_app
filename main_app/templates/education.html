@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+    <h1>Uczelnie w Bydgoszczy</h1>
+    <article class="education clearfix">
+        <a href="{% url 'main_app:educationUKW' %}"><h3>UKW-Uniwersytet Kazimierza Wielkiego w Bydgoszczy</h3>
+            <img class="img_education-article"
+                 src="{% static 'img/UKW_logo.jpg' %}"
+                 alt="Logo UKW">
+            <p>Publiczna uczelnia (uniwersytet pełnoprofilowy) w Bydgoszczy, której geneza sięga 1969 r. Uniwersytet
+                posiada siedem wydziałów, Jest największą uczelnią w mieście i drugą w regionie kujawsko-pomorskim pod
+                względem liczby profesorów, studentów i absolwentów.</p></a>
+    </article>
+    <article class="education clearfix">
+        <a href="{% url 'main_app:educationUTP' %}"><h3>Uniwersytet Technologiczno-Przyrodniczy im. Jana i Jędrzeja Śniadeckich w
+            Bydgoszczy </h3>
+            <img class="img_education-article"
+                 src="{% static 'img/utp_logo.png' %}"
+                 alt="Logo UTP">
+            <p>Według Webometrycznego Rankingu Uniwersytetów Świata ze stycznia 2015, pokazującego zaangażowanie
+                instytucji akademickich w istnieniu w sieci Web, uczelnia zajmuje 16. miejsce w Polsce wśród uczelni
+                technicznych, a na świecie 2412. pośród wszystkich typów uczelni.</p></a>
+    </article>
+    <article class="education clearfix">
+        <a href="{% url 'main_app:educationUMK' %}"><h3>Collegium Medicum im. Ludwika Rydygiera w Bydgoszczy</h3><img
+                class="img_education-article"
+                src="{% static 'img/UMK_logo.png' %}"
+                alt="Logo UMK">
+            <p>Collegium Medicum im. Ludwika Rydygiera w Bydgoszczy (do 24 listopada 2004 r. Akademia Medyczna w
+                Bydgoszczy) – część bydgoska Uniwersytetu Mikołaja Kopernika ukierunkowana na kształcenie studentów w
+                naukach medycznych, zlokalizowana w Bydgoszczy. Według rankingu Wprost z 2012 roku zajmuje 9. miejsce
+                wśród uczelni medycznych w Polsce.</p></a>
+    </article>
+    <article class="education clearfix">
+        <a href="{% url 'main_app:educationBSW' %}"><h3>Szkoła Wyższa w Bydgoszczy</h3>
+            <img class="img_education-article"
+                 src="{% static 'img/BSW_logo.png' %}"
+                 alt="Logo UKW">
+            <p>Polska niepubliczna szkoła wyższa w Bydgoszczy.</p></a>
+    </article>
+    <article class="education clearfix">
+        <a href="{% url 'main_app:educationWSG' %}"><h3>Wyższa Szkoła Gospodarki w Bydgoszczy</h3>
+            <img class="img_education-article"
+                 src="{% static 'img/WSG_logo.jpg' %}"
+                 alt="Logo UKW">
+            <p>Wyższa Szkoła Gospodarki w Bydgoszczy (WSG) (dawniej Wyższa Pomorska Szkoła Turystyki i Hotelarstwa) –
+                niepubliczna uczelnia w Bydgoszczy założona 17 marca 1999 roku.</p></a>
+    </article>
+    <article class="education clearfix">
+        <a href="{% url 'main_app:educationWSB' %}"><h3>Wyższa Szkoła Bankowa w Toruniu Wydział Finansów i Zarządzania w
+            Bydgoszczy</h3>
+            <img class="img_education-article"
+                 src="{% static 'img/WSB_logo.jpg' %}"
+                 alt="Logo UKW">
+            <p>Wyższa Szkoła Bankowa w Toruniu Wydział Finansów i Zarządzania w Bydgoszczy stanowi jednostkę
+                dydaktyczno-naukową toruńskiej, niepublicznej Wyższej Szkoły Bankowej (utworzonej 27 sierpnia 1998r.),
+                funkcjonująca w Bydgoszczy od 2007 roku. Łącznie oba wydziały stanowią największą niepubliczną uczelnię
+                w województwie pod względem liczby studentów.</p></a>
+    </article>
+{% endblock %}

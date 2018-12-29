@@ -1,0 +1,843 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Lato', sans-serif;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+body {
+    margin: 0 auto;
+}
+
+.active {
+    background-color: rgb(110, 110, 122);
+}
+
+header {
+    width: 100vw;
+
+    position: relative;
+    height: 40vh;
+    overflow: hidden;
+    background-image: url('../img/bydgoszcz-tlo.jpg');
+    background-attachment: scroll;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+
+header>* {
+    /*przyklejenie całego headera względem okna przeglądaraki */
+    position: absolute;
+}
+
+header a img.logo {
+    position: absolute;
+    width: 8vw;
+    height: 5vw;
+    top: 3vh;
+    left: 3vh;
+}
+
+.movement {
+    position: relative;
+    width: 30vw;
+    top: 3vh;
+    height: 30px;
+    line-height: 22px;
+    margin: 0 auto;
+    font-size: 25px;
+    background-color: rgb(0, 0, 0, 0.3);
+    color: white;
+    overflow: hidden;
+    font-family: 'Charm', cursive;
+}
+
+.movement>p {
+    position: absolute;
+    margin: 0;
+    white-space: nowrap;
+    animation: move 9s linear infinite;
+}
+
+nav {
+    background-color: #343A40;
+
+
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+
+    float: left;
+    width: calc(100% / 6);
+    cursor: pointer;
+    transition: 0.8s;
+
+}
+
+
+
+nav ul li a {
+    position: relative;
+    display: block;
+    font-size: 13px;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    overflow: hidden;
+
+
+}
+
+nav ul li:hover {
+    background-color: grey;
+
+
+}
+
+nav ul li a:hover span {
+    left: 0;
+}
+
+nav ul li i {
+    padding-right: 5px;
+    font-size: 20px
+}
+
+main {
+    max-width: 75vw;
+    margin: 0 auto;
+}
+
+
+
+#arrow {
+    width: 64px;
+    height: 64px;
+    border: 2px solid black;
+    margin: 0 auto;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    border-radius: 50%;
+    color: black;
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 0px 15px 0 black, 0px 30px 0 black;
+    overflow: hidden;
+
+}
+
+.fa-angle-down {
+    animation: arrow 1.6s infinite linear;
+}
+
+
+.line {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    bottom: 6px;
+    left: -100%;
+    transition: 0.4s;
+}
+
+
+
+
+main h1 {
+    margin-top: 5vh;
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid black;
+    letter-spacing: 2px;
+
+}
+
+main h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid black;
+    font-size: 18px;
+    letter-spacing: 2px;
+
+}
+
+main h3 {
+    text-align: center;
+
+}
+
+main ul {
+    list-style: none;
+}
+
+main a {
+    text-decoration: none;
+    text-transform: none;
+    color: black;
+}
+
+
+main .education:hover {
+    text-decoration: underline;
+    font-size: 18px;
+    transition: 1.5s;
+}
+
+.img_education-article {
+    float: left;
+    margin: 0px 10px 10px 0;
+    border-radius: 5% 5%;
+    width: 10vw;
+}
+
+.link:hover {
+    letter-spacing: 1.5px;
+}
+
+.link i {
+    margin: 0 auto;
+    color: #00CCFF;
+    font-size: 30px;
+}
+
+.link a {
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    color: #00CCFF;
+
+}
+
+.img-article {
+    position: relative;
+    float: left;
+    margin: 0px 10px 10px 0;
+    border-radius: 5% 5%;
+    width: 30vw;
+    transition: 0.5s;
+}
+
+.img-article:hover {
+    transform: scale(1.2);
+}
+
+.full_article {
+    text-align: center;
+}
+
+.img_small_photo {
+
+    margin: 10px 10px 10px 0;
+    border-radius: 5% 5%;
+    width: 10vw;
+}
+
+.img_full_article {
+    margin: 5px 10px 5px 0;
+    border-radius: 20px;
+    width: 75vw;
+    max-height: 500px;
+    transition: 0.5s;
+}
+
+
+
+
+
+article p {
+    padding-top: 1.5vh;
+    font-size: 14px;
+    text-align: left;
+    letter-spacing: 1.1 px;
+    text-justify: auto;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+main .map {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 60px;
+    width: 100%;
+    height: 50vh;
+
+}
+
+main .promotion {
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    width: 40vw;
+    height: 20vw;
+}
+
+
+
+
+footer .socials {
+    background-color: #343A40;
+    text-align: center;
+    color: white;
+
+}
+
+
+div .social {
+    margin: 0 auto;
+    max-width: 30%;
+    display: block;
+
+}
+
+footer h1 {
+    font-size: 25px;
+    letter-spacing: 1.5px;
+}
+
+footer .social img {
+    float: left;
+    width: 50px;
+    padding: 5px 0;
+}
+
+footer .social span {
+    float: left;
+    line-height: 50px;
+    padding-left: 20px;
+    font-size: 12px;
+}
+
+footer .social a {
+    float: left;
+    line-height: 50px;
+    padding-left: 20px;
+    font-size: 12px;
+    text-decoration-line: none;
+    color: white;
+}
+
+
+@media (orientation: landscape) and (min-width: 640px) {
+    header a img.logo {
+        width: 10vw;
+        height: 6vw;
+        top: 5vh;
+        left: 5vh;
+    }
+
+    nav ul li i {
+        padding-right: 5px;
+        font-size: 22px
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    main {
+        margin: 0 auto;
+        max-width: 90vw;
+    }
+
+    main h1 {
+        margin: 2vh;
+    }
+
+    #arrow {
+        margin-bottom: 12vh;
+        margin-top: 12vh;
+    }
+
+    article p {
+        font-size: 13px;
+    }
+
+    main .map {
+        margin-top: none;
+        height: 70vh;
+
+    }
+
+    h3 {
+        font-size: 13px;
+        margin-top: 16px;
+
+    }
+
+    .img-article {
+        width: 50vw;
+    }
+
+    .img-article:hover {
+        transform: scale(1.2);
+    }
+
+    .img_full_article {
+        width: 90vw;
+    }
+
+    main .promotion {
+        width: 60vw;
+        height: 40vw;
+    }
+
+    div .social {
+        margin: 0 auto;
+        max-width: 45%;
+
+    }
+
+    footer h1 {
+        font-size: 20px;
+        letter-spacing: 1.5px;
+    }
+
+    footer .social img {
+        width: 40px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1000px) {
+    header a img.logo {
+        width: 12vw;
+        height: 8vw;
+        top: 4vh;
+        left: 4vh;
+    }
+
+    .movement {
+        font-size: 21px;
+    }
+
+    nav ul li i {
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+        letter-spacing: 1.4px;
+    }
+
+    #arrow {
+        margin-bottom: 2vh;
+        margin-top: 2vh;
+    }
+
+    article p {
+        font-size: 13px;
+    }
+
+    main .map {
+        margin-top: none;
+        height: 70vh;
+
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .img-article {
+        width: 50vw;
+    }
+
+    div .social {
+        max-width: 30%;
+
+    }
+
+    footer h1 {
+        font-size: 24px;
+        letter-spacing: 1.5px;
+    }
+
+
+}
+
+
+
+
+@media (orientation: landscape) and (min-width: 1300px) {
+    header a img.logo {
+        width: 8vw;
+        height: 5vw;
+    }
+
+    nav ul li i {
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        font-size: 10px;
+        padding: 6px;
+    }
+
+    .line {
+        bottom: 2px;
+    }
+
+    main {
+        max-width: 70vw;
+    }
+
+
+    article p {
+        font-size: 12px;
+    }
+
+    main .map {
+        margin-top: none;
+        height: 70vh;
+
+    }
+
+    main h1 {
+        font-size: 22px;
+    }
+
+    main h2 {
+        font-size: 20px;
+    }
+
+    main h3 {
+        font-size: 18px;
+    }
+
+    .img-article {
+        width: 22vw;
+    }
+
+    .img_full_article {
+        width: 70vw;
+    }
+
+    main .promotion {
+        width: 50vw;
+        height: 30vw;
+    }
+
+    footer h1 {
+        font-size: 24px;
+        letter-spacing: 1.5px;
+    }
+
+
+}
+
+@media (orientation: portrait) and (min-width: 300px) {
+    header {
+        height: 40vh;
+        background-size: auto;
+        background-position: 15%;
+    }
+
+    header a img.logo {
+        width: 18vw;
+        height: 12vw;
+        top: 2vh;
+        left: 2vh;
+    }
+
+
+
+    .movement {
+        width: 50vw;
+        top: 5vh;
+        font-size: 21px;
+
+    }
+
+    nav ul li i {
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        font-size: 8px;
+        letter-spacing: 2.2px;
+        padding: 4px;
+    }
+
+    .line {
+        bottom: 2px;
+    }
+
+    main h1 {
+        margin-top: 1vh;
+        font-size: 18px;
+        margin-bottom: 2vh;
+    }
+
+    #arrow {
+        margin-bottom: 1vh;
+        margin-top: 1vh;
+    }
+
+    .img-article {
+        width: 75vw;
+    }
+
+    .link i {
+        font-size: 16px;
+    }
+
+    .link a {
+        font-size: 12px;
+    }
+
+    article p {
+        font-size: 13px;
+    }
+
+    main .map {
+
+        height: 50vh;
+
+    }
+
+    main h2 {
+        margin-bottom: 5px;
+    }
+
+    main h3 {
+        font-size: 15px;
+        margin: 10px 0;
+    }
+
+    .img_education-article {
+        width: 20vw;
+    }
+
+    main .promotion {
+        margin-bottom: 50px;
+        width: 80vw;
+        height: 60vw;
+    }
+
+    .img_full_article {
+        width: 40vh;
+        min-height: 100px;
+    }
+
+
+
+    .img_small_photo {
+        width: 30vw;
+    }
+
+    .img_full_article:hover {
+        transform: scale(1.3)
+    }
+
+    div .social {
+        max-width: 100%;
+        padding: 0 3px;
+
+    }
+
+    footer h1 {
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+
+    footer .social img {
+        width: 30px;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 360px) {
+    nav ul li i {
+        font-size: 23px;
+    }
+
+    nav ul li a {
+
+        padding: 6px;
+    }
+
+    .img_full_article {
+        width: 35vh;
+        min-height: 100px;
+    }
+
+    div .social {
+        max-width: 80%;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 400px) {
+    nav ul li a {
+        padding: 10px;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 700px) {
+    header {
+        background-size: auto;
+        background-position: center center;
+    }
+
+    header a img.logo {
+        width: 15vw;
+        height: 10vw;
+        top: 2vh;
+        left: 2vh;
+    }
+
+
+
+    .movement {
+        width: 50vw;
+        top: 5vh;
+        font-size: 21px;
+
+    }
+
+    nav ul li i {
+        font-size: 25px;
+    }
+
+    nav ul li a {
+        font-size: 15px;
+        letter-spacing: 1.4px;
+        padding: 10px;
+    }
+
+    .line {
+        bottom: 3px;
+    }
+
+    main h1 {
+        font-size: 22px;
+        margin-bottom: 2vh;
+    }
+
+    #arrow {
+        margin-bottom: 1vh;
+        margin-top: 1vh;
+    }
+
+    .img-article {
+        width: 75vw;
+    }
+
+    .link i {
+        font-size: 22px;
+    }
+
+    .link a {
+        font-size: 18px;
+        letter-spacing: 1.2px;
+    }
+
+    article p {
+        font-size: 16px;
+    }
+
+    main .map {
+
+        height: 50vh;
+
+    }
+
+    main h2 {
+        margin-bottom: 5px;
+    }
+
+    main h3 {
+        font-size: 15px;
+        margin: 10px 0;
+    }
+
+    .img_education-article {
+        width: 20vw;
+    }
+
+    main .promotion {
+        margin-bottom: 50px;
+        width: 80vw;
+        height: 60vw;
+    }
+
+    .img_full_article {
+        width: 40vh;
+        min-height: 100px;
+    }
+
+    .img_full_article:hover {
+        transform: scale(1.3)
+    }
+
+    div .social {
+        max-width: 50%;
+        padding: 0 3px;
+
+    }
+
+    footer h1 {
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+
+    footer .social img {
+        width: 40px;
+    }
+
+    footer .social span {
+        font-size: 14px;
+    }
+
+
+}
+
+@keyframes arrow {
+    0% {
+        transform: translateY(-80px)
+    }
+
+    50% {
+        transform: translateY(0px)
+    }
+
+    100% {
+        transform: translateY(80px)
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+        padding-left: 110%;
+    }
+
+    100% {
+        transform: translateX(-100%);
+        padding-left: 110%;
+    }
+}
+
+.button-normal {
+    width: 200px;
+    margin-bottom: 5px;
+}

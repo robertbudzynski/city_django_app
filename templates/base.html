@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Miasto Bydgoszcz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Charm" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Oswald&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+          crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+<header>
+    <a href="{% url 'places:all' %}"><img class="logo" src="{% static 'img/bydgoszcz-logo.png' %}"></a>
+    <div class="movement">
+        <p>Poznaj nasze miasto Bydgoszcz .... Zapraszamy</p>
+    </div>
+</header>
+
+<nav>
+    <ul class="clearfix">
+        <li><a href="{% url 'places:all' %}">
+            <i class="fas fa-map-marked"></i>Atrakcje<span class="line"></span></a></li>
+        <li><a href="{% url 'main_app:education' %}">
+            <i class="fas fa-graduation-cap"></i>Edukacja<span class="line"></span></a></li>
+        <li><a href="{% url 'main_app:history' %}">
+            <i class="fas fa-landmark"></i>Historia<span class="line"></span></a></li>
+        <li><a href="{% url 'main_app:sport' %}">
+            <i class="far fa-futbol"></i>Sport<span class="line"></span></a></li>
+        <li><a href="{% url 'main_app:promotion' %}">
+            <i class="fab fa-youtube-square"></i>Promocja<span class="line"></span></a></li>
+        {% if user.is_authenticated %}
+            <li><a href="{% url 'users:user_details' %}">
+            <i class="fab fa-youtube-square"></i>Użytkownik:{{ user.get_username }} Wyloguj<span class="line"></span></a></li>
+        {% else %}
+            <li><a href="{% url 'users:signup' %}">
+                <i class="fab fa-youtube-square"></i>Zaloguj/Rejestracja<span class="line"></span></a></li>
+        {% endif %}
+    </ul>
+</nav>
+
+<div class="container mycontent">
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</div>
+
+<footer>
+    <div class="socials">
+        <h1>Kontakt:</h1>
+        <div class="social clearfix"><img src="{% static 'img/mail-icon.png' %}"
+                                          alt="Mail kontakt"><span>MiastoBydgoszcz@gmail.com</span></div>
+        <div class="social clearfix"><img src="{% static 'img/phone-icon.png' %}"
+                                          alt="Telefon"><span>825 984 536</span></div>
+        <div class="social clearfix"><img src="{% static 'img/face-icon.png' %}"
+                                          alt="Facebook"><a
+                href="www.facebook.com/groups/NaszaBydgoszcz/">www.facebook.com/groups/NaszaBydgoszcz/</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
